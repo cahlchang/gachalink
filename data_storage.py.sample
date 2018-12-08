@@ -1,0 +1,76 @@
+lst_5_a = [
+    "one",
+    "two",
+    "three"
+]
+
+
+lst_4_a = [
+    "one",
+    "two",
+    "three",
+    "four"
+]
+
+
+lst_3_a = [
+    "one",
+    "two",
+    "three",
+    "four",
+    "five"
+]
+
+
+lst_5_b = [
+    "one",
+    "two",
+    "three"
+]
+
+
+lst_4_b = [
+    "one",
+    "two",
+    "three",
+    "four"
+]
+
+
+lst_3_reisou = [
+    "one",
+    "two",
+    "three",
+    "four",
+    "five"
+]
+
+
+lst_rew = [
+    lst_5_a,
+    lst_5_b,
+    lst_4_a,
+    lst_4_b,
+    lst_3_a,    
+    lst_3_b
+]
+
+
+lst_title = [
+    "星5！！ アルファ！",
+    "星5　ベータ",
+    "星4！アルファ",
+    "星4　ベータ",
+    "星3　アルファ",
+    "星3　ベータ"
+]
+
+
+lst_table = [
+    1,
+    5,
+    8,
+    20,
+    60,
+    100
+]

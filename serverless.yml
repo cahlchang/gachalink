@@ -1,0 +1,13 @@
+service: gachalink-demo
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: ap-northeast-1
+
+functions:
+  hello:
+    handler: handler.exec_gacha
+
+plugins:
+  - serverless-python-requirements
