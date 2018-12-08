@@ -1,0 +1,26 @@
+---
+- hosts: localhost
+  vars_files: vars/env.yml    
+  tasks:
+    - name: deploy API gateway
+      aws_api_gateway:
+        region: "ap-northeast-1"
+        api_id: "{{ id_api_gateway }}"
+        state: present
+        stage: "{{ name_stage }}"
+        swagger_text: "{{ lookup('template', 'templates/swagger_spec.yml') }}"
+        deploy_desc: API Deployment description.
+
+    - cloudfront_distribution:
+        state: present
+        distribution_id: "{{ id_cloudfront }}"
+        origins:
+          - id: id_cloudfront_link
+            domain_name: "{{ id_api_gateway }}.execute-api.ap-northeast-1.amazonaws.com"
+            origin_path: "/{{ name_stage }}"
+            custom_headers:
+              - header_name: Accept
+                header_value: image/png,image/jpeg,image/gif
+              - header_name: Content-Type
+                header_value: image/png,image/jpeg,image/gif
+
